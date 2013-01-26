@@ -1,1 +1,6 @@
 <%= t '.home_page' %>
+
+<% @about.each do |a| %>
+	<h1><%= a.title %></h1>
+	<p><%= a.body %></p>
+<% end %>
