@@ -19,8 +19,7 @@ ActiveAdmin.register Event do
 
 		  	f.has_many :event_speakers do |event_speakers|
 		  		event_speakers.inputs :speaker 
-		  		event_speakers.input :_destroy, :as=>:boolean, :required => false, :label=>'Remove'
-		  		end
+		  	end
 
 		  end
 			f.buttons 
