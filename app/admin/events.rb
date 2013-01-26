@@ -18,7 +18,8 @@ ActiveAdmin.register Event do
 		  	f.input :title
 
 		  	f.has_many :event_speakers do |event_speakers|
-		  		event_speakers.inputs :speaker 
+		  		event_speakers.input :speaker 
+		  		event_speakers.input :_destroy, :as => :boolean
 		  	end
 
 		  end
