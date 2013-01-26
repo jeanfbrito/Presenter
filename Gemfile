@@ -5,7 +5,6 @@ gem 'rails', '3.2.11'
 # Server
 gem 'thin'
 
-
 # Frontend stuff
 gem 'jquery-rails'
 
