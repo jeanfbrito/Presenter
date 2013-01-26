@@ -7,4 +7,18 @@ ActiveAdmin.register Event do
 	end
 	# Filter only by title
 	filter :title
+
+	form do |f|
+		  f.inputs "Details" do # physician's fields
+		  	f.input :title
+		  end
+		  f.has_many :event_speakers do |association|
+		  	association.inputs do 
+		  		association.input :speaker
+		  	end
+		  end
+		  
+		end
 end
+
+

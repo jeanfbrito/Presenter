@@ -3,4 +3,5 @@ class Speaker < ActiveRecord::Base
 
   has_many :event_speakers
   has_many :events, :through => :event_speakers
+  accepts_nested_attributes_for :event_speakers
 end
