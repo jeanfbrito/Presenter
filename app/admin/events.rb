@@ -8,6 +8,19 @@ ActiveAdmin.register Event do
 	# Filter only by title
 	filter :title
 
+	show do |ad|
+      attributes_table do
+        row :title
+
+        event.speakers.each do |speaker|
+      		row :speaker do 
+      			speaker.name 
+      		end
+    		end
+
+      end
+  end
+
 	form do |f|
 		  f.inputs "Details" do # physician's fields
 		  	f.input :title
@@ -15,7 +28,6 @@ ActiveAdmin.register Event do
 		  	f.input :final_date
 		  	f.input :initial_date
 		  	f.input :local
-		  	f.input :title
 
 		  	f.has_many :event_speakers do |event_speakers|
 		  		event_speakers.input :speaker 
@@ -26,3 +38,4 @@ ActiveAdmin.register Event do
 			f.buttons 
 		end
 end
+
