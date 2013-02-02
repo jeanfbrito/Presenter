@@ -9,7 +9,8 @@ gem 'thin'
 gem 'jquery-rails'
 
 # Administrative
-gem 'activeadmin'
+#gem 'activeadmin'
+gem 'rails_admin'
 
 group :development do
   gem "better_errors"
@@ -43,3 +44,5 @@ group :production do
 	gem 'pg'	
 
 end
+
+gem "devise"
